@@ -1,0 +1,32 @@
+{
+    "name": "server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "dev": "nodemon index.js",
+        "start": "node index.js",
+        "dev:worker": "nodemon worker.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@langchain/community": "^0.3.42",
+        "@langchain/core": "^0.3.55",
+        "@langchain/openai": "^0.5.10",
+        "@langchain/qdrant": "^0.1.2",
+        "bullmq": "^5.52.2",
+        "cors": "^2.8.5",
+        "express": "^4.21.2",
+        "langchain": "^0.3.25",
+        "multer": "^1.4.5-lts.2",
+        "pdf-parse": "^1.1.1"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.21",
+        "@types/multer": "^1.4.12",
+        "@types/node": "^22.15.17",
+        "nodemon": "^2.0.22"
+    }
+}
