@@ -129,7 +129,7 @@ app.get("/chat", async(req, res) => {
         return res.status(500).json({ error: "Failed to process query" });
     }
 });
-
+app.use('/uploads', express.static('uploads'));
 app.listen(8000, () => {
     console.log("Server is running on port 8000");
 });
