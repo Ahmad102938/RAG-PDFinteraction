@@ -41,7 +41,7 @@ const upload = multer({ storage: storage });
 const app = express();
 app.use(cors());
 
-// Initialize embeddings and vector store lazily
+// Initialize embeddings and vector store
 let vectorStore;
 async function initializeVectorStore() {
     if (!vectorStore) {
@@ -63,10 +63,10 @@ async function initializeVectorStore() {
 const llm = new ChatGoogleGenerativeAI({
     apiKey: process.env.GOOGLE_API_KEY,
     model: "gemini-1.5-flash",
-    maxOutputTokens: 128, // Optimize for low usage
+    maxOutputTokens: 128, //for low usage
 });
 
-// Define prompt template
+//prompt template
 const promptTemplate = PromptTemplate.fromTemplate(`
     Context: {context}
     Question: {query}
